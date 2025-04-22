@@ -1,0 +1,160 @@
+/**
+
+// static
+
+TOOL CHAIN : C:\msys64\ucrt64\bin
+
+vcpkg x64-mingw-static
+vcpkg integrate install
+
+g++ -shared -static -static-libgcc -static-libstdc++ -o tesseract.dll ocr_dll_gen.cpp -I"C:/Users/pablo.perez/dev/cpp/_install/vcpkg/installed/x64-mingw-static/include"  -L"C:/Users/pablo.perez/dev/cpp/_install/vcpkg/installed/x64-mingw-static/lib"    -ltesseract55 -lleptonica -lcurl -larchive -ltiff -lwebp -lsharpyuv -lgif -lopenjp2 -lssl -lcrypto -lpng -ljpeg -lz -lbz2 -llzma -llz4 -lzstd -lws2_32 -lbcrypt -lcrypt32 -Wl,--subsystem,windows -m64
+
+*/
+
+
+#include <windows.h>
+#include <iostream>
+#include <conio.h>
+#include <string>
+#include <cstdlib>  // For free()
+
+#pragma hdrstop
+#pragma argsused
+
+// Define function pointer types for the DLL functions
+typedef const char* (__cdecl *GetTesseractOcrOutputFunc)();
+typedef const char* (__cdecl *GetTesseractVersionFunc)();
+
+extern "C" __declspec(dllexport) const char* __cdecl GetTesseractOcrOutputWrapper() {
+    // Load the DLL
+    HINSTANCE hDll = LoadLibraryA("tesseract.dll");
+    if (!hDll) {
+        DWORD errorCode = GetLastError(); // Capture the error immediately
+        std::cerr << "Failed to load tesseract.dll. Error code: " << errorCode << std::endl;
+
+        // Optional: Format the error message for more detail
+        LPVOID errorMsg;
+        FormatMessageA(
+            FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+            NULL,
+            errorCode,
+            MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+            (LPSTR)&errorMsg,
+            0,
+            NULL
+        );
+        std::cerr << "Error message: " << (LPSTR)errorMsg << std::endl;
+        LocalFree(errorMsg);
+
+        return "Failed to load tesseract.dll.";
+    }
+
+    // Get the addresses of the exported functions
+    GetTesseractOcrOutputFunc getOcrOutput = (GetTesseractOcrOutputFunc)GetProcAddress(hDll, "GetTesseractOcrOutput");
+
+    // Check if the functions were found
+    if (!getOcrOutput) {
+        std::cerr << "Failed to get function addresses 'GetTesseractOcrOutput'. Error code: " << GetLastError() << std::endl;
+        FreeLibrary(hDll);
+        return "Failed to get function addresses";
+    }
+
+    // Test GetTesseractOcrOutput (uses hardcoded "Input.png")
+    const char* ocrResult = getOcrOutput();
+
+    /////////////////////////////////////////////////////////////////////
+    // your C++ logic inits here
+    /////////////////////////////////////////////////////////////////////
+
+
+    const char* prefix  = "C++ Builder Wrapper : ";
+
+    // Allocate enough memory for the combined string
+    size_t buffer_size = strlen(prefix) + strlen(ocrResult) + 1;
+    char* msg = (char*)malloc(buffer_size);
+
+    if (msg == NULL) {
+        return "Memory allocation failed!";
+    }
+
+    // Build the combined string
+    strcpy(msg, prefix);
+    strcat(msg, ocrResult);
+
+
+    /////////////////////////////////////////////////////////////////////
+    // your C++ logic end here
+    /////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////
+    // Finishing Task and Cleanup
+    /////////////////////////////////////////////////////////////////////
+    FreeLibrary(hDll);
+
+    return msg;       // Remember: caller must free() this!
+}
+
+
+// Declare the function with C linkage
+extern "C" __declspec(dllexport) const char* __cdecl GetTesseractVersionWrapper()
+{
+    // Load the DLL
+    HINSTANCE hDll = LoadLibraryA("tesseract.dll");
+    if (!hDll) {
+        DWORD errorCode = GetLastError(); // Capture the error immediately
+        std::cerr << "Failed to load tesseract.dll. Error code: " << errorCode << std::endl;
+
+        // Optional: Format the error message for more detail
+        LPVOID errorMsg;
+        FormatMessageA(
+            FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+            NULL,
+            errorCode,
+            MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+            (LPSTR)&errorMsg,
+            0,
+            NULL
+        );
+        std::cerr << "Error message: " << (LPSTR)errorMsg << std::endl;
+        LocalFree(errorMsg);
+
+        return "Failed to load tesseract.dll.";
+    }
+    // Get the addresses of the exported functions
+    GetTesseractVersionFunc getTesseractVersion = (GetTesseractVersionFunc)GetProcAddress(hDll, "GetTesseractVersion");
+
+    // Check if the functions were found
+    if (!getTesseractVersion) {
+        std::cerr << "Failed to get function addresses 'getTesseractVersion'. Error code: " << GetLastError() << std::endl;
+        FreeLibrary(hDll);
+        return "Failed to get function addresses";
+    }
+
+    // GetTesseractVersion
+    const char* tesseractVersion = getTesseractVersion();
+
+    /////////////////////////////////////////////////////////////////////
+    // your C++ logic end here
+    /////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////
+    // Finishing Task and Cleanup
+    /////////////////////////////////////////////////////////////////////
+    //FreeLibrary(hDll);
+
+    return tesseractVersion;       // static value don't delete
+}
+
+//
+extern "C" __declspec(dllexport) const void __cdecl FreeMemory(void* ptr)
+{
+    if (ptr != nullptr)  // Check if the pointer is valid
+    {
+        free(ptr);  // Free the memory
+    }
+}
+
+extern "C" int _libmain(unsigned long reason)
+{
+	return 1;
+}

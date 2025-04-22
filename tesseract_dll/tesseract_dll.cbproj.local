@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/04/16 00:06:02.000.410,=C:\OneDrive\_root\Personal\dev\cppBuilder\File1.cpp</Transaction>
+    <Transaction>2025/04/16 00:06:02.000.304,=C:\OneDrive\_root\Personal\dev\cppBuilder\Project1PCH1.h</Transaction>
+    <Transaction>2025/04/16 00:06:56.000.529,C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dll.cbproj=C:\OneDrive\_root\Personal\dev\cppBuilder\Project1.cbproj</Transaction>
+    <Transaction>2025/04/16 00:06:56.000.526,C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dllPCH1.h=C:\OneDrive\_root\Personal\dev\cppBuilder\Project1PCH1.h</Transaction>
+    <Transaction>2025/04/16 00:10:56.000.362,C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dll.cpp=C:\OneDrive\_root\Personal\dev\cppBuilder\File1.cpp</Transaction>
+    <Transaction>2025/04/16 00:12:43.000.848,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj=C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dll.cbproj</Transaction>
+    <Transaction>2025/04/16 00:12:43.000.796,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cpp=C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dll.cpp</Transaction>
+    <Transaction>2025/04/16 00:12:43.000.683,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dllPCH2.h=C:\OneDrive\_root\Personal\dev\cppBuilder\tesseract_dllPCH1.h</Transaction>
+    <Transaction>2025/04/16 00:13:16.000.649,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj=C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj</Transaction>
+    <Transaction>2025/04/16 00:13:56.000.452,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj=C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj</Transaction>
+    <Transaction>2025/04/16 00:14:35.000.807,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll\tesseract_dll.cpp=C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cpp</Transaction>
+    <Transaction>2025/04/16 00:14:42.000.250,C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll\tesseract_dll.cbproj=C:\Users\pablo.perez\dev\cpp\TensorFlow\vstudiocode\src\__cppBuilder\tesseract\tesseract_dll.cbproj</Transaction>
+    <Transaction>2025/04/22 07:59:26.507,=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\File1.cpp</Transaction>
+    <Transaction>2025/04/22 07:59:56.813,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_gen.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\File1.cpp</Transaction>
+    <Transaction>2025/04/22 08:25:37.775,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_gen_.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_gen.cpp</Transaction>
+    <Transaction>2025/04/22 08:26:01.605,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_genl.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp</Transaction>
+    <Transaction>2025/04/22 08:26:13.962,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_genl.cpp</Transaction>
+    <Transaction>2025/04/22 08:26:50.492,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll_.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_dll_gen_.cpp</Transaction>
+    <Transaction>2025/04/22 08:27:07.010,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp</Transaction>
+    <Transaction>2025/04/22 08:34:07.145,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll_.cpp</Transaction>
+    <Transaction>2025/04/22 08:34:17.083,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll_txt.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.cpp</Transaction>
+    <Transaction>2025/04/22 08:34:35.177,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll_txt.cpp</Transaction>
+    <Transaction>2025/04/22 08:43:17.971,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll_.disabled=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.disabled</Transaction>
+    <Transaction>2025/04/22 08:44:15.944,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp</Transaction>
+    <Transaction>2025/04/22 08:44:22.490,C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll.cpp=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\tesseract_dll_.cpp</Transaction>
+    <Transaction>2025/04/22 08:45:43.432,=C:\Users\pablo.perez\dev\cpp\_cppBuilder\CPP_CBUILDER_TESSERACT\tesseract_dll\ocr_gen_dll.disabled</Transaction>
+  </Transactions>
+</BorlandProject>
